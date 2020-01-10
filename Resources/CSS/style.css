@@ -196,6 +196,7 @@ header button:hover {
   font-size: 30px;
   background: #25b99a;
   display: none;
+  text-transform: capitalize;
   z-index: 10;
 }
 
@@ -208,7 +209,7 @@ header button:hover {
     padding-bottom: 1px;
     border-bottom: none;
     border-radius: 20px;
-    font-size: 5rem;
+    font-size: 4rem;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.24);
     background-color: #25b99a;
   }
@@ -233,11 +234,11 @@ header button:hover {
     position: relative;
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   .triangleList:before {
     border-color: transparent white;
   }
-}
+} */
 
 .menuNest {
   display: none;
