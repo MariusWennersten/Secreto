@@ -70,6 +70,7 @@ const nestAdder = function(array, kategori) {
         document.getElementById("bedrifter").innerHTML = "";
         document.getElementById("overskrift").innerHTML = underCat;
         underkategoriIkon(underCat);
+        document.getElementById("menu").style.display = "none";
         });
 
       nestAdderTest.push(array[i].underkategori);

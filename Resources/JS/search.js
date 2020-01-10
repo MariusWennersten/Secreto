@@ -15,7 +15,7 @@ const kategoriIkon = function(kategori) {
 const navnIkon = function(navn) {
   const nyArray = alleBedrifter.filter(bedrift => bedrift.navn == navn);
   bedriftIkon(nyArray);
-  document.getElementById("overskrift").innerHTML = "Navn";
+  document.getElementById("overskrift").innerHTML = "Egendefinert";
 }
 
 
