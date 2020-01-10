@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Secreto</title>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="resources/css/style.css">
+  </head>
+  <body>
+
+    <header>
+      <input id="searchInput" type="text" placeholder="Hva leter du etter?   F.eks. 'Tannlege' ">
+      <button id="searchIcon">
+        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.145 18.29c-5.042 0-9.145-4.102-9.145-9.145s4.103-9.145 9.145-9.145 9.145 4.103 9.145 9.145-4.102 9.145-9.145 9.145zm0-15.167c-3.321 0-6.022 2.702-6.022 6.022s2.702 6.022 6.022 6.022 6.023-2.702 6.023-6.022-2.702-6.022-6.023-6.022zm9.263 12.443c-.817 1.176-1.852 2.188-3.046 2.981l5.452 5.453 3.014-3.013-5.42-5.421z"/></svg>
+      </button>
+      <button id="menuIcon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+      </button>
+
+      <div id="mobileHeader">
+
+      </div>
+
+          </header>
+
+    <div id="menu">
+      <ul id="menuList">
+        <li class="triangleList" id="matMenu">Mat</li>
+          <div class="menuNest" id="matNest">
+
+          </div>
+        <li class="triangleList" id="helseMenu">Helse</li>
+          <div class="menuNest" id="helseNest">
+
+          </div>
+        <li class="triangleList" id="velvereMenu">Velvære</li>
+          <div class="menuNest" id="velvereNest">
+
+          </div>
+        <a href="Resources/HTML/submit.html">
+        <li class="triangleList" id="menuSubmit">Legg til din bedrift</li>
+      </a>
+
+      </ul>
+
+    </div>
+    <div id="main">
+
+
+
+      <div id="filterContainer">
+        <p id="filterPText">Filter</p>
+        <p id="filterPluss">+</p>
+
+          <div id="filterContent">
+            <h3 id="filterCat">Kategori</h3>
+            <h3 id="filterBy">By</h3>
+          </div>
+
+      </div>
+
+      <p id="overskrift">Populære</p>
+
+      <div id="bedrifter">
+      </div>
+
+  </div>
+
+
+    <script defer src="resources/js/bedrifter.js"></script>
+    <script defer src="resources/js/main.js"></script>
+    <script defer src="resources/js/search.js"></script>
+    <script defer src="resources/js/filter.js"></script>
+  </body>
+</html>
