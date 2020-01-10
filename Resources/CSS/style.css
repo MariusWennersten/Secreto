@@ -36,6 +36,8 @@ header {
     height: 7%;
     left: 0;
     right: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
 
@@ -46,7 +48,7 @@ header {
 @media (max-width: 1000px) {
   #mobileHeader {
     background: #25b99a;
-    height: 100%;
+    height: 105%;
     width: 100%;
     margin-top: 12%;
     margin-left: -1rem;
