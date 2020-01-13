@@ -12,14 +12,21 @@
   </head>
   <body>
     <header>
-      <h1>Legg til din bedrift</h1>
+      <p id="addBedText">Legg til din bedrift</p>
     </header>
 
-    <div id="container">
-      <input id="type" type="text" name="" value="" placeholder="Type bedrift. F.eks. 'Restaurant'">
-      <input id="name" type="text" name="" value="" placeholder="Navn på bedrift">
+    <div id="inputContainer">
+    <input id="addBedNavn" type="text" name="" value="" placeholder="Navn på bedrift" onfocus="this.placeholder = '|'" onblur="this.placeholder = 'Navn på bedrift'">
+    <input id="addBedBilde" type="text" name="" value="" placeholder="Link til bilde av bedriften din." onfocus="this.placeholder = '|'" onblur="this.placeholder = 'Link til bilde av bedriften din.'">
+    <input id="addBedBy" type="text" name="" value="" placeholder="Hvilken by er bedriften din i?" onfocus="this.placeholder = '|'" onblur="this.placeholder = 'Hvilken by er bedriften din i?'">
+    <input id="addBedKategori" type="text" name="" value="" placeholder="Kategori. F.eks. 'Mat, Helse, Velvære etc." onfocus="this.placeholder = '|'" onblur="this.placeholder = 'Kategori. F.eks. Mat, Helse, Velvære etc.'">
+    <input id="addBedUnderkategori" type="text" name="" value="" placeholder="Underkategori. F.eks. 'Pizza, Lege, Frisør etc." onfocus="this.placeholder = '|'" onblur="this.placeholder = 'Underkategori. F.eks. Pizza, Lege, Frisør etc.'">
+    <textarea id="addBedBeskrivelse" type="text" name="" value="" placeholder="En kort beskrivelse av bedriften din." onfocus="this.placeholder = '|'" onblur="this.placeholder = 'En kort beskrivelse av bedriften din.'"></textarea>
+    <button id="addBedFerdig" type="button" name="ferdig">Ferdig</button>
+    <a href="../../index.html">link text</a>
     </div>
 
-
+    <script defer src="../js/bedriftArrays.js"></script>
+    <script defer src="../js/submit.js"></script>
   </body>
 </html>

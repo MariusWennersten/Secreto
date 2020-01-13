@@ -1,29 +1,5 @@
 
 
-function bedrift(index, navn, bilde, by, deskripsjon, kategori, underkategori) {
-  this.index = index;
-  this.navn = navn;
-  this.bilde = bilde;
-  this.by = by;
-  this.deskripsjon = deskripsjon;
-  this.kategori = kategori;
-  this.underkategori = underkategori;
-}
-
-const alleBedrifter = [
-  new bedrift("1","Nico As","resources/Images/stockfront.jpg","Bardu","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. ", "helse", "lege"),
-  new bedrift("2","Marius As","resources/images/stockfront.jpg","Bergen","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. ", "mat", "pizza"),
-  new bedrift("3","Einar As","resources/images/stockfront.jpg","Trondheim","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. ", "mat", "pizza"),
-  new bedrift("4","Petter As","resources/images/stockfront.jpg","Trondheim","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. ", "velvere", "frisør"),
-  new bedrift("5","Simen As","resources/images/stockfront.jpg","Oslo","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. ", "velvere", "frisør"),
-  new bedrift("6","Vivian As","resources/images/stockfront.jpg","Oslo","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. ", "mat", "sushi"),
-  new bedrift("7","Enya As","resources/images/stockfront.jpg","Oslo","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. ", "helse", "MR"),
-];
-
-const matArray = alleBedrifter.filter(bedrift => bedrift.kategori == "mat");
-const helseArray = alleBedrifter.filter(bedrift => bedrift.kategori == "helse");
-const velvereArray = alleBedrifter.filter(bedrift => bedrift.kategori == "velvere");
-
 const bedriftIkon = function(array) {
   for (let i = 0; i < array.length; i++) {
     const underDiv = document.createElement("div");
@@ -54,6 +30,8 @@ const bedriftIkon = function(array) {
   }
 }
 bedriftIkon(alleBedrifter);
+
+console.log(alleBedrifter);
 
 const nestAdderTest = [];
 

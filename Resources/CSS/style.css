@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   background: #edf0f1;
   color: white;
@@ -9,10 +13,6 @@ body {
   body {
     background-color: white;
   }
-}
-
-body, input, button {
-  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -318,6 +318,19 @@ textarea:focus, input:focus {
   margin-top: 0;
 }
 
+#filterDone {
+  width: 14rem;
+  height: 6rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  font-size: 3rem;
+  border-radius: 10px;
+  background-color: rgba(37, 185, 154, 0.5);
+  color: white;
+  border-color: white;
+  cursor: pointer;
+}
+
 .active{
   background-color: lightgrey;
 }
@@ -377,6 +390,7 @@ textarea:focus, input:focus {
   #filterCat {
     margin-top: 0;
   }
+
 }
 
 #overskrift {
