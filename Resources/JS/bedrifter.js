@@ -31,7 +31,6 @@ const bedriftIkon = function(array) {
 }
 bedriftIkon(alleBedrifter);
 
-console.log(alleBedrifter);
 
 const nestAdderTest = [];
 
