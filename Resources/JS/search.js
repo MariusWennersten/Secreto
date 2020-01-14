@@ -41,15 +41,20 @@ function search(value){
 document.getElementById("searchIcon").addEventListener("click", function() {
   if (document.getElementById("mobileHeader").style.display == "none" || document.getElementById("mobileHeader").style.display == "") {
     document.getElementById("mobileHeader").style.display = "block";
-    document.getElementById("searchInput").style.display = "block";
+    document.getElementById("searchFieldset").style.display = "block";
   }
   else {
     document.getElementById("mobileHeader").style.display = "none";
-    document.getElementById("searchInput").style.display = "none";
-    document.getElementById("overskrift").innerHTML = "Ingen resultater";
-    document.getElementById("bedrifter").innerHTML = "";
-    let value = document.getElementById("searchInput").value;
-    value = value.trim().toLowerCase();
-    search(value);
+    document.getElementById("searchFieldset").style.display = "none";
   }
+});
+
+document.getElementById("mobileSearch").addEventListener("click", function() {
+  document.getElementById("mobileHeader").style.display = "none";
+  document.getElementById("searchFieldset").style.display = "none";
+  document.getElementById("overskrift").innerHTML = "Ingen resultater";
+  document.getElementById("bedrifter").innerHTML = "";
+  let value = document.getElementById("searchInput").value;
+  value = value.trim().toLowerCase();
+  search(value);
 });
