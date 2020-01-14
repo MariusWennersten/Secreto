@@ -85,7 +85,7 @@ fieldset {
 @media (max-width: 1000px) {
   #mobileHeader {
     background: #25b99a;
-    height: 111%;
+    height: 115%;
     width: 100%;
     margin-top: -12%;
     margin-left: -1rem;
