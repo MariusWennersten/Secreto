@@ -1,6 +1,4 @@
-// let value = document.getElementById("searchInput").value;
-// value = value.trim().toLowerCase();
-// search(value);
+
 
 document.getElementById("addBedFerdig").addEventListener("click", function() {
   const navnValue = document.getElementById("addBedNavn").value;
