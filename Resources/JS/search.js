@@ -12,6 +12,12 @@ const kategoriIkon = function(kategori) {
   document.getElementById("overskrift").innerHTML = kategori;
 }
 
+const byIkon = function(by) {
+  const nyArray = alleBedrifter.filter(bedrift => bedrift.by == by);
+  bedriftIkon(nyArray);
+  document.getElementById("overskrift").innerHTML = by;
+}
+
 const navnIkon = function(navn) {
   const nyArray = alleBedrifter.filter(bedrift => bedrift.navn == navn);
   bedriftIkon(nyArray);
@@ -24,15 +30,19 @@ function search(value){
     document.getElementById("bedrifter").innerHTML = "";
     for (let i=0; i < alleBedrifter.length; i++) {
         if (alleBedrifter[i].underkategori.toLowerCase() === value) {
-            underkategoriIkon(alleBedrifter[i].underkategori);
-            return;
-        }
+          underkategoriIkon(alleBedrifter[i].underkategori);
+          return;
+      }
         else if (alleBedrifter[i].kategori.toLowerCase() === value) {
-            kategoriIkon(alleBedrifter[i].kategori);
-            return;
+          kategoriIkon(alleBedrifter[i].kategori);
+          return;
         }
+        else if (alleBedrifter[i].by.toLowerCase() === value) {
+          byIkon(alleBedrifter[i].by);
+          return;
+      }
         else if (alleBedrifter[i].navn.toLowerCase().includes(value)) {
-            navnIkon(alleBedrifter[i].navn);
+          navnIkon(alleBedrifter[i].navn);
         }
     }
 }

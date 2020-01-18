@@ -12,13 +12,20 @@ document.getElementById("menuIcon").addEventListener("click", function() {
 
 // Legger kategoriene inn i menyen
 for (let i = 0; i < kategoriArray.length; i++) {
-  const kategori = kategoriArray[i].kategori;
-  document.getElementById(kategori + "Menu").addEventListener("click", function() {
-    if (document.getElementById(kategori + "Nest").style.display == "block") {
-      document.getElementById(kategori + "Nest").style.display = "none";
+  const kategori1 = kategoriArray[i].kategori;
+  document.getElementById(kategori1 + "Menu").addEventListener("click", function() {
+    if (document.getElementById(kategori1 + "Nest").style.display == "block") {
+      document.getElementById(kategori1 + "Nest").style.display = "none";
     }
     else {
-      document.getElementById(kategori + "Nest").style.display = "block";
+      document.getElementById(kategori1 + "Nest").style.display = "block";
+      for (let i = 0; i < kategoriArray.length; i++) {
+        const kategori2 = kategoriArray[i].kategori;
+        if (kategori1 !== kategori2) {
+        document.getElementById(kategori2 + "Nest").style.display = "none";
+        }
+      
+      }
     }
   });
   
