@@ -1,35 +1,22 @@
-const filterCatTest = [];
-const filterByTest = [];
 
-const filterCatAdder = function(array) {
-  for (let i = 0; i < array.length; i++) {
-
-    if (filterCatTest.indexOf(array[i].underkategori) === -1) {
-      const filterCat = document.createElement("p");
-      filterCat.setAttribute("id", "filter" + array[i].navn);
-      filterCat.innerHTML = array[i].underkategori;
-      document.getElementById("filterCat").appendChild(filterCat);
-      const underCat = array[i].underkategori;
-      const navnCat = array[i].index;
-
-      filterCatTest.push(array[i].underkategori);
-    }
-  }
-
-  for (let i = 0; i < array.length; i++) {
-
-    if (filterByTest.indexOf(array[i].by) === -1) {
-      const filterBy = document.createElement("p");
-      filterBy.setAttribute("id", "filter" + array[i].index);
-      filterBy.innerHTML = array[i].by;
-      document.getElementById("filterBy").appendChild(filterBy);
-
-      filterByTest.push(array[i].by);
-    }
-  }
+for (let i = 0; i < kategoriArray.length; i++) {
+  const filterCat = document.createElement("p");
+  filterCat.setAttribute("id", "filter" + kategoriArray[i].navn);
+  filterCat.innerHTML = kategoriArray[i].underkategori;
+  document.getElementById("filterCat").appendChild(filterCat);
 }
 
-filterCatAdder(alleBedrifter);
+const filterByTest = [];
+for (let i = 0; i < alleBedrifter.length; i++) {
+  if (filterByTest.indexOf(alleBedrifter[i].by) === -1) {
+    const filterBy = document.createElement("p");
+    filterBy.setAttribute("id", "filter" + alleBedrifter[i].index);
+    filterBy.innerHTML = alleBedrifter[i].by;
+    document.getElementById("filterBy").appendChild(filterBy);
+
+    filterByTest.push(alleBedrifter[i].by);
+  }
+}
 
 let ukatFilter = [false, false, false, false, false, false, false, false];
 let byFilterA = [false, false, false, false, false, false, false, false];
@@ -37,7 +24,7 @@ let byFilterA = [false, false, false, false, false, false, false, false];
 const filterCatOnClick = function(array) {
   for (let i = 0; i < array.length; i++) {
 
-    const underCat = array[i].underkategori;
+    const underkat = array[i].underkategori;
     const aNavn = array[i].navn
     if (document.getElementById("filter" + array[i].navn)) {
       document.getElementById("filter" + array[i].navn).addEventListener("click", function() {
@@ -53,7 +40,7 @@ const filterCatOnClick = function(array) {
         }
         else {
           for (var j = 0; j < ukatFilter.length; j++) {
-            if (ukatFilter[j] == underCat) {
+            if (ukatFilter[j] == underkat) {
               ukatFilter[j] = false;
             }
           }
@@ -112,14 +99,14 @@ document.getElementById("filterPText").addEventListener("click", function() {
     document.getElementById("filterContent").style.display = "none";
     document.getElementById("filterPluss").innerText = "+";
     document.getElementById("filterPluss").style.fontSize = "6rem";
-    document.getElementById("filterPluss").style.top = "11rem";
+    document.getElementById("filterPluss").style.top = "37.5rem";
 
   }
   else {
     document.getElementById("filterContent").style.display = "block";
     document.getElementById("filterPluss").innerText = "-";
     document.getElementById("filterPluss").style.fontSize = "12rem";
-    document.getElementById("filterPluss").style.top = "7rem";
+    document.getElementById("filterPluss").style.top = "32.5rem";
   }
 });
 
@@ -127,7 +114,7 @@ document.getElementById("filterDone").addEventListener("click", function() {
   document.getElementById("filterContent").style.display = "none";
   document.getElementById("filterPluss").innerText = "+";
   document.getElementById("filterPluss").style.fontSize = "6rem";
-  document.getElementById("filterPluss").style.top = "11rem";
+  document.getElementById("filterPluss").style.top = "37.5rem";
   document.getElementById("bedrifter").innerHTML = "";
   filterDoneClick();
 });

@@ -56,5 +56,6 @@ document.getElementById("mobileSearch").addEventListener("click", function() {
   document.getElementById("bedrifter").innerHTML = "";
   let value = document.getElementById("searchInput").value;
   value = value.trim().toLowerCase();
+ 
   search(value);
 });

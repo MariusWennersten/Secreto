@@ -32,29 +32,3 @@ const bedriftIkon = function(array) {
 bedriftIkon(alleBedrifter);
 
 
-const nestAdderTest = [];
-
-const nestAdder = function(array, kategori) {
-  for (let i = 0; i < array.length; i++) {
-
-    if (nestAdderTest.indexOf(array[i].underkategori) === -1) {
-      const nest = document.createElement("p");
-      nest.setAttribute("id", array[i].underkategori);
-      nest.innerHTML = array[i].underkategori;
-      document.getElementById(kategori + "Nest").appendChild(nest);
-      const underCat = array[i].underkategori;
-
-      document.getElementById(underCat).addEventListener("click", function() {
-        document.getElementById("bedrifter").innerHTML = "";
-        document.getElementById("overskrift").innerHTML = underCat;
-        underkategoriIkon(underCat);
-        document.getElementById("menu").style.display = "none";
-        });
-
-      nestAdderTest.push(array[i].underkategori);
-    }
-  }
-}
-nestAdder(matArray, "mat");
-nestAdder(helseArray, "helse");
-nestAdder(velvereArray, "velvere")

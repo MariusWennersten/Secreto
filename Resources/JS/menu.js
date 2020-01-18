@@ -10,8 +10,9 @@ document.getElementById("menuIcon").addEventListener("click", function() {
   }
 });
 
-
-const menuClickCreator = function(kategori) {
+// Legger kategoriene inn i menyen
+for (let i = 0; i < kategoriArray.length; i++) {
+  const kategori = kategoriArray[i].kategori;
   document.getElementById(kategori + "Menu").addEventListener("click", function() {
     if (document.getElementById(kategori + "Nest").style.display == "block") {
       document.getElementById(kategori + "Nest").style.display = "none";
@@ -20,8 +21,22 @@ const menuClickCreator = function(kategori) {
       document.getElementById(kategori + "Nest").style.display = "block";
     }
   });
+  
 }
 
-menuClickCreator("mat");
-menuClickCreator("helse");
-menuClickCreator("velvere");
+// Legger underkategoriene under sine respektive kategorier i menyen
+for (let i = 0; i < underkatArray.length; i++) {
+  const nest = document.createElement("p");
+  nest.setAttribute("id", underkatArray[i].underkategori);
+  nest.innerHTML = underkatArray[i].underkategori;
+  document.getElementById(underkatArray[i].kategori + "Nest").appendChild(nest);
+  const underkat = underkatArray[i].underkategori;
+  
+  document.getElementById(underkat).addEventListener("click", function() {
+    document.getElementById("bedrifter").innerHTML = "";
+    document.getElementById("overskrift").innerHTML = underkat;
+    underkategoriIkon(underkat);
+    document.getElementById("menu").style.display = "none";
+    });
+  
+}
