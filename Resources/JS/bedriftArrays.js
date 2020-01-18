@@ -13,11 +13,11 @@ function bedrift(index, navn, bilde, by, kategori, underkategori, bidrag, deskri
 
 const alleBedrifter = [
   new bedrift("1","Nico As","resources/Images/stockfront.jpg","Bardu", "helse", "lege","0","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
-  new bedrift("2","Marius As","resources/images/stockfront.jpg","Bergen", "mat", "pizza","0","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
-  new bedrift("3","Einar As","resources/images/stockfront.jpg","Trondheim", "mat", "pizza","3","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
+  new bedrift("2","Marius As","resources/images/stockfront.jpg","Bergen", "mat", "italiensk","0","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
+  new bedrift("3","Einar As","resources/images/stockfront.jpg","Trondheim", "mat", "italiensk","3","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
   new bedrift("4","Petter As","resources/images/stockfront.jpg","Trondheim", "velvære", "frisør","2","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
   new bedrift("5","Simen As","resources/images/stockfront.jpg","Oslo", "velvære", "frisør","0","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
-  new bedrift("6","Vivian As","resources/images/stockfront.jpg","Oslo", "mat", "sushi","1","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
+  new bedrift("6","Vivian As","resources/images/stockfront.jpg","Oslo", "mat", "asiatisk","1","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
   new bedrift("7","Enya As","resources/images/stockfront.jpg","Oslo", "helse", "MR","0","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
   new bedrift("8","Oscar As","resources/images/stockfront.jpg","Bardu", "elektronikk", "skjermreperasjon","0","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
   new bedrift("9","Abdul As","resources/images/stockfront.jpg","Oslo", "bolig", "rørlegger","0","St. James's i Lothiarika er et populært hotell med god service og fin beliggenhet ved rullesteinstranden rett utenfor Lardos. "),
