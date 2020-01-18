@@ -1,8 +1,8 @@
 
-for (let i = 0; i < kategoriArray.length; i++) {
+for (let i = 0; i < underkatArray.length; i++) {
   const filterCat = document.createElement("p");
-  filterCat.setAttribute("id", "filter" + kategoriArray[i].navn);
-  filterCat.innerHTML = kategoriArray[i].underkategori;
+  filterCat.setAttribute("id", "filter" + underkatArray[i].navn);
+  filterCat.innerHTML = underkatArray[i].underkategori;
   document.getElementById("filterCat").appendChild(filterCat);
 }
 

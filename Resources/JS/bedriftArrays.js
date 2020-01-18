@@ -44,8 +44,6 @@ for (let i = 0; i < alleBedrifter.length; i++) {
   }
 }
 
-
-
 const matArray = alleBedrifter.filter(bedrift => bedrift.kategori == "mat");
 const helseArray = alleBedrifter.filter(bedrift => bedrift.kategori == "helse");
 const velværeArray = alleBedrifter.filter(bedrift => bedrift.kategori == "velvære");
