@@ -10,8 +10,30 @@ document.getElementById("menuIcon").addEventListener("click", function() {
   }
 });
 
-// Legger kategoriene inn i menyen
+// Legger kategoriene og underkategoriene inn i menyen
 for (let i = 0; i < kategoriArray.length; i++) {
+  const idk = document.createElement("p");
+  idk.setAttribute("id", kategoriArray[i].kategori + "Menu");
+  idk.setAttribute("class", "triangleList");
+  idk.innerHTML = kategoriArray[i].kategori;
+  document.getElementById("menuList").appendChild(idk);
+
+  const mby = document.createElement("div");
+  mby.setAttribute("id", kategoriArray[i].kategori + "Nest");
+  mby.setAttribute("class", "menuNest");
+  document.getElementById(kategoriArray[i].kategori + "Menu").appendChild(mby);
+
+  for (let j = 0; j < alleBedrifter.length; j++) {
+    if (alleBedrifter[j].kategori === kategoriArray[i].kategori 
+      && !document.getElementById(alleBedrifter[j].underkategori)) {
+     
+      const hmm = document.createElement("p");
+      hmm.setAttribute("id", alleBedrifter[j].underkategori);
+      hmm.innerHTML = alleBedrifter[j].underkategori;
+      document.getElementById(kategoriArray[i].kategori + "Nest").appendChild(hmm);
+    }
+  }
+  // Viser underkategoriene når kategorien blir trykket på
   const kategori1 = kategoriArray[i].kategori;
   document.getElementById(kategori1 + "Menu").addEventListener("click", function() {
     if (document.getElementById(kategori1 + "Nest").style.display == "block") {
@@ -28,15 +50,11 @@ for (let i = 0; i < kategoriArray.length; i++) {
       }
     }
   });
-  
+
 }
 
-// Legger underkategoriene under sine respektive kategorier i menyen
+// Hvis brukeren trykker på en underkategori blir den tatt til underkategoriens side
 for (let i = 0; i < underkatArray.length; i++) {
-  const nest = document.createElement("p");
-  nest.setAttribute("id", underkatArray[i].underkategori);
-  nest.innerHTML = underkatArray[i].underkategori;
-  document.getElementById(underkatArray[i].kategori + "Nest").appendChild(nest);
   const underkat = underkatArray[i].underkategori;
   
   document.getElementById(underkat).addEventListener("click", function() {
